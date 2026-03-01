@@ -157,14 +157,7 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        fkeys_layer {
-            if-layers = <LOWER RAISE>;
-            then-layer = <FKEYS>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     keymap {
         compatible = "zmk,keymap";
