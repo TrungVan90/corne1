@@ -7,6 +7,7 @@
 #include <dt-bindings/zmk/mouse.h>
 
 // Cấu hình tốc độ mouse (PHẢI đặt TRƯỚC include pointing.h)
+
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // Tốc độ di chuyển (default: 600)
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // Tốc độ scroll (default: 10)
 
@@ -25,6 +26,7 @@
 / {
     behaviors {
         // ─── Home Row Mod cho TAY TRÁI ───
+
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -45,6 +47,7 @@
         };
 
         // ─── Home Row Mod cho TAY PHẢI ───
+
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -169,6 +172,7 @@
         // ═══════════════════════════════════════════════════════════════
         // Layer 0: DEFAULT - QWERTY với Home Row Mods
         // ═══════════════════════════════════════════════════════════════
+
         default_layer {
             label = "default";
 
@@ -183,16 +187,17 @@
             //                      └──────┴──────┴──────┘   └──────┴──────┴──────┘
 
             bindings = <
-&kp TAB    &kp Q        &kp W        &kp E         &kp R          &kp T          &kp Y          &kp U            &kp I          &kp O         &kp P          &kp BSPC
-&kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F   &kp G          &kp H          &hmr RSHFT J     &hmr RCTRL K   &hmr LALT L   &hmr RGUI SEMI &kp SQT
-&kp LSHFT  &kp Z        &kp X        &kp C         &kp V          &kp B          &kp N          &kp M            &kp COMMA      &kp DOT       &kp FSLH       &kp RSHFT
-                                      &mo RAISE     &mo LOWER      &kp SPACE      &lt MOUSE BSPC &kp ENTER        &mo NUMPAD
+&kp TAB    &kp Q        &kp W        &kp E         &kp R         &kp T    &kp Y      &kp U            &kp I         &kp O        &kp P           &kp BSPC
+&kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G    &kp H      &hmr RSHFT J     &hmr RCTRL K  &hmr LALT L  &hmr RGUI SEMI  &kp SQT
+&kp LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B    &kp N      &kp M            &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
+                                     &none         &mo 2         &mo 1    &kp SPACE  &lt 5 BACKSPACE  &kp ENTER
             >;
         };
 
         // ═══════════════════════════════════════════════════════════════
         // Layer 1: LOWER - Navigation + Clipboard
         // ═══════════════════════════════════════════════════════════════
+
         arrow_layer {
             label = "lower";
 
@@ -207,16 +212,17 @@
             //                      └──────┴──────┴──────┘   └──────┴──────┴──────┘
 
             bindings = <
-&kp CAPS   &kp K_APP    &kp TAB      &kp ESC       &kp DELETE     &kp LC(R)      &kp F4         &kp PG_UP        &kp UP         &kp PG_DN     &kp HOME       &kp END
-&trans     &kp LGUI     &kp LALT     &kp LCTRL     &kp LSHFT      &kp LC(D)      &kp F2         &kp LEFT         &kp DOWN       &kp RIGHT     &kp SQT        &kp BSLH
-&trans     &kp LC(A)    &kp LC(X)    &kp LC(C)     &kp LC(V)      &kp PSCRN      &trans         &trans           &trans         &trans        &trans         &trans
-                                      &trans        &trans         &trans         &kp SQT        &trans           &trans
+&trans  &kp CAPSLOCK  &kp K_APP  &kp TAB    &kp ESCAPE  &kp DELETE    &kp F4  &kp PG_UP  &kp UP    &kp PG_DN  &none          &trans
+&trans  &kp LGUI      &kp LALT   &kp LCTRL  &kp LSHFT   &kp LC(R)     &kp F2  &kp LEFT   &kp DOWN  &kp RIGHT  &kp SQT        &trans
+&trans  &kp LC(A)     &kp LC(X)  &kp LC(C)  &kp LC(V)   &kp LC(D)     &none   &kp HOME   &none     &kp END    &kp BACKSLASH  &trans
+                                 &trans     &trans      &trans        &mo 3   &trans     &trans
             >;
         };
 
         // ═══════════════════════════════════════════════════════════════
         // Layer 2: RAISE - Programming Symbols + Macros
         // ═══════════════════════════════════════════════════════════════
+
         symbols_layer {
             label = "raise";
 
@@ -231,16 +237,17 @@
             //                      └──────┴──────┴──────┘   └──────┴──────┴──────┘
 
             bindings = <
-&trans     &trans       &trans       &kp TAB       &kp ESC        &kp DELETE     &kp PIPE       &kp ASTRK        &kp LPAR       &kp RPAR      &kp FSLH       &trans
-&trans     &kp LGUI     &kp LALT     &kp LCTRL     &kp LSHFT      &bt BT_CLR     &kp EQUAL      &kp PLUS         &kp LBKT       &kp RBKT      &kp MINUS      &trans
-&trans     &fz_cal      &fz_left     &fz_mid       &fz_right      &kp PSCRN      &kp GRAVE      &kp AMPS         &kp LBRC       &kp RBRC      &kp BSLH       &trans
-                                      &trans        &trans         &trans         &kp SQT        &trans           &trans
+&trans  &none     &none     &kp TAB    &kp ESC    &kp DELETE    &kp PIPE   &kp ASTRK  &kp LPAR  &kp RPAR  &kp FSLH   &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none         &kp EQUAL  &kp PLUS   &kp LBKT  &kp RBKT  &kp MINUS  &trans
+&trans  &fz_cal   &fz_left  &fz_mid    &fz_right  &kp PSCRN     &kp GRAVE  &kp AMPS   &kp LBRC  &kp RBRC  &kp BSLH   &trans
+                            &trans     &trans     &trans        &mo 4      &trans     &trans
             >;
         };
 
         // ═══════════════════════════════════════════════════════════════
         // Layer 3: NUMPAD - Bàn phím số
         // ═══════════════════════════════════════════════════════════════
+
         numpad_layer {
             label = "numpad";
 
@@ -255,16 +262,17 @@
             //                      └──────┴──────┴──────┘   └──────┴──────┴──────┘
 
             bindings = <
-&trans     &trans       &kp TAB      &kp ESC       &kp DELETE     &trans         &trans         &kp N7           &kp N8         &kp N9        &trans         &trans
-&trans     &kp LGUI     &kp LALT     &kp LCTRL     &kp LSHFT      &trans         &trans         &kp N4           &kp N5         &kp N6        &trans         &trans
-&trans     &trans       &trans       &trans        &trans         &trans         &kp N1         &kp N2           &kp N3         &trans        &trans         &trans
-                                      &trans        &trans         &trans         &kp N0         &kp DOT          &trans
+&trans  &none     &none     &kp TAB    &kp ESCAPE  &kp DELETE    &none   &kp N7        &kp N8        &kp N9        &none  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT   &none         &none   &kp N4        &kp N5        &kp N6        &none  &trans
+&trans  &none     &none     &none      &none       &none         &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &trans
+                            &trans     &trans      &trans        &trans  &kp NUMBER_0  &kp DOT
             >;
         };
 
         // ═══════════════════════════════════════════════════════════════
         // Layer 4: FKEYS - Phím chức năng (LOWER + RAISE)
         // ═══════════════════════════════════════════════════════════════
+
         f_layer {
             label = "fkeys";
 
@@ -279,16 +287,17 @@
             //                      └──────┴──────┴──────┘   └──────┴──────┴──────┘
 
             bindings = <
-&trans     &trans       &kp TAB      &kp ESC       &kp DELETE     &trans         &kp F11        &kp F7           &kp F8         &kp F9        &kp F12        &trans
-&trans     &kp LGUI     &kp LALT     &kp LCTRL     &kp LSHFT      &trans         &kp F4         &kp F5           &kp F6         &trans        &trans         &trans
-&trans     &trans       &trans       &trans        &trans         &trans         &kp F1         &kp F2           &kp F3         &trans        &trans         &trans
-                                      &trans        &trans         &trans         &kp F10        &trans           &trans
+&trans  &none     &none     &kp TAB    &kp ESCAPE  &kp DELETE    &kp F11  &kp F7   &kp F8  &kp F9  &kp F12  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT   &none         &none    &kp F4   &kp F5  &kp F6  &none    &trans
+&trans  &none     &none     &none      &none       &none         &none    &kp F1   &kp F2  &kp F3  &none    &trans
+                            &trans     &trans      &trans        &trans   &kp F10  &trans
             >;
         };
 
         // ═══════════════════════════════════════════════════════════════
         // Layer 5: MOUSE - Chuột + Media + Bluetooth
         // ═══════════════════════════════════════════════════════════════
+
         mouse_layer {
             label = "mouse";
 
@@ -303,10 +312,10 @@
             //                      └──────┴──────┴──────┘   └──────┴──────┴──────┘
 
             bindings = <
-&bt BT_SEL 0 &msc SCRL_UP   &mmv MOVE_UP   &msc SCRL_DOWN &bt BT_SEL 2  &trans         &trans         &kp C_NEXT       &kp C_VOL_UP   &kp C_VOL_DN  &kp C_PREV     &bt BT_CLR
-&bt BT_SEL 1 &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &bt BT_SEL 3 &trans         &trans         &kp RSHFT        &kp RCTRL      &kp RALT      &kp RGUI       &trans
-&trans       &msc SCRL_LEFT &trans         &msc SCRL_RIGHT &trans        &trans         &trans         &mkp LCLK        &mkp MCLK      &mkp RCLK     &kp C_MUTE     &trans
-                                            &trans          &trans        &trans         &trans         &trans           &trans
+&trans  &bt BT_SEL 0  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &bt BT_SEL 2    &trans  &kp C_NEXT  &kp C_VOL_UP  &kp C_VOL_DN  &kp C_PREV  &bt BT_CLR
+&trans  &bt BT_SEL 1  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &bt BT_SEL 3    &trans  &kp RSHFT   &kp RCTRL     &kp RALT      &kp RGUI    &trans
+&trans  &none         &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &none           &trans  &mkp LCLK   &mkp MCLK     &mkp RCLK     &kp C_MUTE  &trans
+                                      &trans          &trans           &trans          &trans  &trans      &trans
             >;
         };
     };
