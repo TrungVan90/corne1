@@ -163,12 +163,12 @@
         compatible = "zmk,combos";
 
         C_Leftwin {
-            bindings = <&kp LEFT_WIN>;
+            bindings = <&kp LGUI>;
             key-positions = <38 13>;
         };
 
         C_LeftAlt {
-            bindings = <&kp LEFT_ALT>;
+            bindings = <&kp LALT>;
             key-positions = <38 14>;
         };
 
@@ -178,17 +178,17 @@
         };
 
         C_Leftshift {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp LSHFT>;
             key-positions = <38 16>;
         };
 
         C_RightWin {
-            bindings = <&kp RIGHT_GUI>;
+            bindings = <&kp RGUI>;
             key-positions = <39 22>;
         };
 
         C_RightAlt {
-            bindings = <&kp LEFT_ALT>;
+            bindings = <&kp LALT>;
             key-positions = <39 21>;
         };
 
@@ -198,7 +198,7 @@
         };
 
         C_RightShift {
-            bindings = <&kp RIGHT_SHIFT>;
+            bindings = <&kp RSHFT>;
             key-positions = <39 19>;
         };
     };
