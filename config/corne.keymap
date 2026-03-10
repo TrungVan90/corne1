@@ -163,41 +163,49 @@
         C_Leftwin {
             bindings = <&kp LGUI>;
             key-positions = <38 13>;
+            layers = <0>;
         };
 
         C_LeftAlt {
             bindings = <&kp LALT>;
             key-positions = <38 14>;
+            layers = <0>;
         };
 
         C_LeftCtrl {
             bindings = <&kp LCTRL>;
             key-positions = <38 15>;
+            layers = <0>;
         };
 
         C_Leftshift {
             bindings = <&kp LSHFT>;
             key-positions = <38 16>;
+            layers = <0>;
         };
 
         C_RightWin {
             bindings = <&kp RGUI>;
             key-positions = <39 22>;
+            layers = <0>;
         };
 
         C_RightAlt {
             bindings = <&kp LALT>;
             key-positions = <39 21>;
+            layers = <0>;
         };
 
         C_RightCtrl {
             bindings = <&kp RCTRL>;
             key-positions = <39 20>;
+            layers = <0>;
         };
 
         C_RightShift {
             bindings = <&kp RSHFT>;
             key-positions = <39 19>;
+            layers = <0>;
         };
     };
 
