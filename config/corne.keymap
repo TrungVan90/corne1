@@ -160,6 +160,8 @@
     combos {
         compatible = "zmk,combos";
 
+        /* ═══ SINGLE MODIFIER ─ Tay trái (thumb 38 + home row) ═══ */
+
         C_Leftwin {
             bindings = <&kp LGUI>;
             key-positions = <38 13>;
@@ -184,6 +186,8 @@
             layers = <0>;
         };
 
+        /* ═══ SINGLE MODIFIER ─ Tay phải (thumb 39 + home row) ═══ */
+
         C_RightWin {
             bindings = <&kp RGUI>;
             key-positions = <39 22>;
@@ -205,6 +209,134 @@
         C_RightShift {
             bindings = <&kp RSHFT>;
             key-positions = <39 19>;
+            layers = <0>;
+        };
+
+        /* ═══ DUAL MODIFIER ─ Tay trái ═══ */
+
+        C_L_CtrlShift {
+            bindings = <&kp LC(LSHFT)>;
+            key-positions = <38 15 16>;
+            layers = <0>;
+        };
+
+        C_L_AltCtrl {
+            bindings = <&kp LA(LCTRL)>;
+            key-positions = <38 14 15>;
+            layers = <0>;
+        };
+
+        C_L_GuiShift {
+            bindings = <&kp LG(LSHFT)>;
+            key-positions = <38 13 16>;
+            layers = <0>;
+        };
+
+        C_L_GuiCtrl {
+            bindings = <&kp LG(LCTRL)>;
+            key-positions = <38 13 15>;
+            layers = <0>;
+        };
+
+        C_L_AltShift {
+            bindings = <&kp LA(LSHFT)>;
+            key-positions = <38 14 16>;
+            layers = <0>;
+        };
+
+        C_L_GuiAlt {
+            bindings = <&kp LG(LALT)>;
+            key-positions = <38 13 14>;
+            layers = <0>;
+        };
+
+        /* ═══ DUAL MODIFIER ─ Tay phải ═══ */
+
+        C_R_CtrlShift {
+            bindings = <&kp RC(RSHFT)>;
+            key-positions = <39 20 19>;
+            layers = <0>;
+        };
+
+        C_R_AltCtrl {
+            bindings = <&kp LA(RCTRL)>;
+            key-positions = <39 21 20>;
+            layers = <0>;
+        };
+
+        C_R_GuiShift {
+            bindings = <&kp RG(RSHFT)>;
+            key-positions = <39 22 19>;
+            layers = <0>;
+        };
+
+        C_R_GuiCtrl {
+            bindings = <&kp RG(RCTRL)>;
+            key-positions = <39 22 20>;
+            layers = <0>;
+        };
+
+        C_R_AltShift {
+            bindings = <&kp LA(RSHFT)>;
+            key-positions = <39 21 19>;
+            layers = <0>;
+        };
+
+        C_R_GuiAlt {
+            bindings = <&kp RG(LALT)>;
+            key-positions = <39 22 21>;
+            layers = <0>;
+        };
+
+        /* ═══ TRIPLE MODIFIER ─ Tay trái ═══ */
+
+        C_L_CtrlAltShift {
+            bindings = <&kp LC(LA(LSHFT))>;
+            key-positions = <38 14 15 16>;
+            layers = <0>;
+        };
+
+        C_L_GuiCtrlShift {
+            bindings = <&kp LG(LC(LSHFT))>;
+            key-positions = <38 13 15 16>;
+            layers = <0>;
+        };
+
+        C_L_GuiAltShift {
+            bindings = <&kp LG(LA(LSHFT))>;
+            key-positions = <38 13 14 16>;
+            layers = <0>;
+        };
+
+        C_L_GuiCtrlAlt {
+            bindings = <&kp LG(LC(LALT))>;
+            key-positions = <38 13 14 15>;
+            layers = <0>;
+        };
+
+        /* ═══ TRIPLE MODIFIER ─ Tay phải ═══ */
+
+        C_R_CtrlAltShift {
+            bindings = <&kp RC(LA(RSHFT))>;
+            key-positions = <39 21 20 19>;
+            layers = <0>;
+        };
+
+        C_R_GuiCtrlShift {
+            bindings = <&kp RG(RC(RSHFT))>;
+            key-positions = <39 22 20 19>;
+            layers = <0>;
+        };
+
+        C_R_GuiAltShift {
+            bindings = <&kp RG(LA(RSHFT))>;
+            key-positions = <39 22 21 19>;
+            layers = <0>;
+        };
+
+        C_R_GuiCtrlAlt {
+            bindings = <&kp RG(RC(LALT))>;
+            key-positions = <39 22 21 20>;
             layers = <0>;
         };
     };
