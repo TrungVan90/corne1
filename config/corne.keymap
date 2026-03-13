@@ -7,8 +7,10 @@
 #include <dt-bindings/zmk/mouse.h>
 
 /* Cấu hình tốc độ mouse (phải đặt trước include pointing.h) */
+/* MOVE_VAL giảm từ 1000 → 700 để mỗi bước nhỏ hơn, di chuyển mượt hơn */
+/* Kết hợp với LATENCY=0 trong config và tăng pointer speed Windows để bù tốc độ */
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 700
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
 #include <behaviors.dtsi>
