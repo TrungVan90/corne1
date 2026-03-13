@@ -75,7 +75,7 @@
         td_lower: tap_dance_lower {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&mo LOWER>, <&tog LOWER>;
         };
     };
