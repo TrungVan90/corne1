@@ -177,8 +177,10 @@
 
         C_TogMouse {
             bindings = <&tog MOUSE>;
-            key-positions = <39 40>;
+            key-positions = <40 41>;
             layers = <0 5>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <300>;
         };
 
         /* ═══ SINGLE MODIFIER ─ Tay trái (thumb 38 + home row) ═══ */
