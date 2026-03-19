@@ -362,6 +362,14 @@
             key-positions = <39 22 21 20>;
             layers = <0>;
         };
+        C_BtClr {
+            bindings = <&bt BT_CLR>;
+            key-positions = <36 37 38>;
+            layers = <0>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <300>;
+        };
+
     };
 
     keymap {
