@@ -388,9 +388,9 @@
         arrow_layer {
             label = "lower";
             bindings = <
-&trans  &kp CAPSLOCK  &kp K_APP  &kp TAB    &kp ESCAPE  &kp LC(R)    &kp F4      &kp PG_UP  &kp UP    &kp PG_DN  &none          &trans
-&trans  &kp LGUI      &kp LALT   &kp LCTRL  &kp LSHFT   &kp LC(D)    &kp F2      &kp LEFT   &kp DOWN  &kp RIGHT  &kp SQT        &trans
-&trans  &kp LC(A)     &kp LC(X)  &kp LC(C)  &kp LC(V)   &kp LC(G)    &none       &kp HOME   &none     &kp END    &kp BACKSLASH  &trans
+&trans  &kp CAPSLOCK  &kp K_APP  &kp TAB    &kp ESCAPE  &kp LC(R)    &kp F4      &kp PG_UP  &kp UP     &kp PG_DN  &none          &trans
+&trans  &kp LGUI      &kp LALT   &kp LCTRL  &kp LSHFT   &kp LC(D)    &kp F2      &kp LEFT   &kp DOWN   &kp RIGHT  &kp SQT        &trans
+&trans  &kp LC(A)     &kp LC(X)  &kp LC(C)  &kp LC(V)   &kp LC(G)    &none       &kp HOME   &kp SPACE  &kp END    &kp BACKSLASH  &trans
                                  &kp LC(Z)  &kp LC(Y)   &trans       &mo NUMPAD  &trans     &trans
             >;
         };
