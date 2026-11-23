@@ -411,19 +411,19 @@
         symbols_layer {
             label = "raise";
             bindings = <
-&trans  &none     &none     &kp TAB    &kp ESC    &none        &kp PIPE   &kp ASTRK  &kp LPAR  &kp RPAR  &kp FSLH   &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none        &kp EQUAL  &kp PLUS   &kp LBKT  &kp RBKT  &kp MINUS  &trans
-&trans  &fz_cal   &fz_left  &fz_mid    &fz_right  &kp PSCRN    &kp GRAVE  &kp AMPS   &kp LBRC  &kp RBRC  &kp BSLH   &trans
-                            &trans     &trans     &trans       &mo FKEYS  &trans     &trans
+&trans  &none            &none              &kp TAB            &kp ESC    &kp AT_SIGN        &kp PIPE   &kp ASTRK  &kp LPAR  &kp RPAR  &kp FSLH   &trans
+&trans  &kp LGUI         &kp LALT           &kp LCTRL          &kp LSHFT  &kp DOLLAR         &kp EQUAL  &kp PLUS   &kp LBKT  &kp RBKT  &kp MINUS  &trans
+&trans  &kp PRINTSCREEN  &kp LS(LA(LC(A)))  &kp LS(LA(LC(B)))  &kp HASH   &kp EXCLAMATION    &kp GRAVE  &kp AMPS   &kp LBRC  &kp RBRC  &kp BSLH   &trans
+                                            &trans             &trans     &trans             &mo FKEYS  &trans     &trans
             >;
         };
 
         numpad_layer {
             label = "numpad";
             bindings = <
-&trans  &none     &none     &kp TAB    &kp ESCAPE  &none     &none   &kp N7  &kp N8  &kp N9  &none         &trans
+&trans  &none     &none     &kp TAB    &kp ESCAPE  &none     &none   &kp N7  &kp N8  &kp N9  &kp COMMA     &trans
 &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT   &none     &none   &kp N4  &kp N5  &kp N6  &kp NUMBER_0  &trans
-&trans  &none     &none     &none      &none       &none     &none   &kp N1  &kp N2  &kp N3  &kp DOT       &trans
+&trans  &fz_cal   &fz_left  &fz_mid    &fz_right   &none     &none   &kp N1  &kp N2  &kp N3  &kp DOT       &trans
                             &trans     &trans      &trans    &trans  &trans  &trans
             >;
         };
